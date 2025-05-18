@@ -1,0 +1,25 @@
+/* Custom hover backgrounds for course cards */
+.card-hover-red:hover {
+    background: linear-gradient(135deg, #ff5858 0%, #f09819 100%) !important;
+    color: #fff !important;
+  }
+  .card-hover-green:hover {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    color: #fff !important;
+  }
+  .card-hover-blue:hover {
+    background: linear-gradient(135deg, #396afc 0%, #2948ff 100%) !important;
+    color: #fff !important;
+  }
+  .card-hover-yellow:hover {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%) !important;
+    color: #fff !important;
+  }
+  @keyframes slideInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  .slide-in-up {
+    animation: slideInUp 1s ease-out both;
+  }
+  #toast { transition: opacity 0.5s; }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KishoreAcademy - Unlock Your Potential</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom1.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="navbar bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center gap-2">
+        <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="KishoreAcademy Logo" class="h-10 w-10">
+        <span class="font-bold text-2xl text-blue-600 tracking-wide">Kishore Academy</span>
+      </div>
+      <nav class="flex items-center gap-8">
+        <ul class="flex gap-6 font-medium">
+          <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#courses" class="hover:text-blue-600">Courses</a></li>
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#testimonials" class="hover:text-blue-600">Testimonials</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-full shadow hover:bg-blue-700 transition">Sign Up</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero flex flex-col md:flex-row items-center justify-between px-6 py-16 bg-gradient-to-r from-blue-50 to-yellow-50" id="home">
+    <div class="flex-1 mb-10 md:mb-0">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-4 leading-tight">Unlock Your Potential with Kishore Academy</h1>
+      <p class="text-lg md:text-xl mb-6 text-gray-700">Interactive courses, expert instructors, and a vibrant community. Learn anywhere, anytime.</p>
+      <a href="#courses" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-8 py-3 rounded-full shadow transition">Explore Courses</a>
+    </div>
+    <div class="flex-1 flex justify-center">
+        <img src="images/hero.png" alt="Online Learning Illustration"
+     class="w-[480px] max-w-full rounded-xl slide-in-up">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12 bg-white">
+    <div class="feature text-center">
+        <img src="images/expert.jpg" 
+     alt="Expert Instructors" 
+     class="mx-auto w-36 h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
+      <h3 class="font-bold text-xl mb-2 text-blue-600">Expert Instructors</h3>
+      <p class="text-gray-600">Learn from industry leaders and academic experts.</p>
+    </div>
+    <div class="feature text-center">
+      <img src="images/flexible.jpg" alt="Flexible Learning" class="mx-auto w-36 h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
+      <h3 class="font-bold text-xl mb-2 text-blue-600">Flexible Learning</h3>
+      <p class="text-gray-600">Access courses at your own pace, on any device.</p>
+    </div>
+    <div class="feature text-center">
+      <img src="images/certificate08.jpg" alt="Certification" class="mx-auto w-36 h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
+      <h3 class="font-bold text-xl mb-2 text-blue-600">Certification</h3>
+      <p class="text-gray-600">Earn certificates to showcase your achievements.</p>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses px-6 py-16 bg-gray-50" id="courses">
+    <h2 class="text-center text-3xl font-extrabold text-blue-700 mb-10">Popular Courses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <!-- Course 1 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-red">
+        <img src="images/web.jpg" alt="Web Development" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">Web Development Bootcamp</h4>
+        <p class="text-gray-600 mb-3">Master HTML, CSS, JavaScript & more.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 2 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-green">
+        <img src="images/data.jpg" alt="Data Science" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">Data Science Essentials</h4>
+        <p class="text-gray-600 mb-3">Analyze data and build predictive models.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 3 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-blue">
+        <img src="images/gd.jpg" alt="Graphic Design" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">Graphic Design Mastery</h4>
+        <p class="text-gray-600 mb-3">Unleash your creativity with design tools.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 4 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-yellow">
+        <img src="images/ai&ml.jpg" alt="AI & Machine Learning" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">AI & Machine Learning</h4>
+        <p class="text-gray-600 mb-3">Build smart applications with AI.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 5 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-red">
+        <img src="images/digital marketting.jpg" alt="Digital Marketing" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">Digital Marketing</h4>
+        <p class="text-gray-600 mb-3">Grow brands with SEO, SEM & social media.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 6 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-green">
+        <img src="images/cyber.jpg" alt="Cybersecurity" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">Cybersecurity Basics</h4>
+        <p class="text-gray-600 mb-3">Protect systems and data from threats.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 7 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-blue">
+        <img src="images/business.jpg" alt="Business Analytics" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">Business Analytics</h4>
+        <p class="text-gray-600 mb-3">Drive decisions with data insights.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+      <!-- Course 8 -->
+      <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-yellow">
+        <img src="images/app.jpg" alt="App Development" class="rounded-lg mb-4 w-full h-36 object-cover">
+        <h4 class="font-bold text-lg mb-2">App Development</h4>
+        <p class="text-gray-600 mb-3">Create mobile apps for Android & iOS.</p>
+        <a href="#" class="bg-blue-100 text-blue-700 font-semibold px-4 py-2 rounded-full mt-auto">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about px-6 py-16 bg-white" id="about">
+    <div class="about-content flex flex-col md:flex-row items-center gap-10 max-w-5xl mx-auto">
+        <img src="images/students-training.jpg" alt= "About Kishore Academy" class="w-72 max-w-full rounded-xl shadow-lg">
+      <div>
+        <h2 class="text-3xl font-extrabold text-blue-700 mb-4">About Kishore Academy</h2>
+        <p class="text-lg text-gray-700">Kishore Academy is dedicated to making high-quality education accessible to everyone. Our platform connects learners with top instructors and a supportive community, empowering you to achieve your goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials px-6 py-16 bg-gray-50" id="testimonials">
+    <h2 class="text-center text-3xl font-extrabold text-blue-700 mb-10">What Our Learners Say</h2>
+    <div class="testimonial-list flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
+      <div class="testimonial bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+        <img src="images/user1.jpg" alt="User 1" class="w-16 h-16 rounded-full mb-4">
+        <blockquote class="italic text-gray-600 mb-3">"Kishore Academy helped me switch careers and land my dream job!"</blockquote>
+        <span class="font-semibold text-blue-600">- Priya Sharma</span>
+      </div>
+      <div class="testimonial bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+        <img src="images/user2.jpg" alt="User 2" class="w-16 h-16 rounded-full mb-4">
+        <blockquote class="italic text-gray-600 mb-3">"The courses are engaging and easy to follow. Highly recommend!"</blockquote>
+        <span class="font-semibold text-blue-600">- Arjun Patel</span>
+      </div>
+      <div class="testimonial bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+        <img src="images/user3.jpg" alt="User 3" class="w-16 h-16 rounded-full mb-4">
+        <blockquote class="italic text-gray-600 mb-3">"Great instructors and vibrant community. I learned so much!"</blockquote>
+        <span class="font-semibold text-blue-600">- Anjali Mehra</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Updated Contact Section -->
+  <footer class="footer bg-gradient-to-r from-blue-700 via-blue-800 to-yellow-400 text-white py-16" id="contact">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
+      <!-- Contact Info -->
+      <div>
+        <h3 class="font-bold text-2xl mb-4">Contact Us</h3>
+        <p class="mb-2"><span class="font-semibold">Email:</span>
+          <a href="mailto:info@KishoreAcademy.com" class="underline">info@KishoreAcademy.com</a>
+        </p>
+        <p class="mb-6"><span class="font-semibold">Phone:</span> +91 91111111111</p>
+        <div>
+          <h4 class="font-semibold mb-2">Follow Us</h4>
+          <div class="flex gap-4">
+            <a href="#"><img src="images/fb.png" alt="Facebook" class="w-10 h-10 object-contain hover:scale-110 transition"></a>
+            <a href="#"><img src="images/x.png" alt="Twitter" class="w-10 h-10 object-contain hover:scale-110 transition"></a>
+            <a href="#"><img src="images/insta.png" alt="Instagram" class="w-10 h-10 object-contain hover:scale-110 transition"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <form class="bg-white rounded-2xl shadow-lg p-8 text-gray-900 flex flex-col gap-4">
+        <h4 class="font-bold text-xl mb-2 text-blue-700">Send us a Message</h4>
+        <input type="text" placeholder="Your Name" class="px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none" required>
+        <input type="email" placeholder="Your Email" class="px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none" required>
+        <textarea placeholder="Your Message" class="px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none resize-none" rows="4" required></textarea>
+        <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-blue-900 transition">Send Message</button>
+      </form>
+    </div>
+    <p class="text-center mt-8 text-blue-100">&copy; 2025 Kishore Academy. All rights reserved.</p>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg opacity-0 pointer-events-none z-50">Message sent!</div>
+  </footer>
+  <script src="script1.js"></script>
+</body>
+</html>
