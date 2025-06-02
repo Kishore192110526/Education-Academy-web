@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,32 +7,52 @@
   <title>KishoreAcademy - Unlock Your Potential</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js for mobile menu -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="custom1.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
   <!-- Navbar -->
-  <header class="navbar bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+  <header class="navbar bg-white shadow-md sticky top-0 z-50 w-full">
+    <div class="w-full max-w-screen-xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 relative">
       <div class="flex items-center gap-2">
         <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="KishoreAcademy Logo" class="h-10 w-10">
         <span class="font-bold text-2xl text-blue-600 tracking-wide">Kishore Academy</span>
       </div>
-      <nav class="flex items-center gap-8">
-        <ul class="flex gap-6 font-medium">
+      <nav x-data="{ open: false }" class="flex items-center gap-4">
+        <!-- Hamburger (mobile) -->
+        <button @click="open = !open" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-blue-600 hover:bg-blue-100 focus:outline-none">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 font-medium">
           <li><a href="#home" class="hover:text-blue-600">Home</a></li>
           <li><a href="#courses" class="hover:text-blue-600">Courses</a></li>
           <li><a href="#about" class="hover:text-blue-600">About</a></li>
           <li><a href="#testimonials" class="hover:text-blue-600">Testimonials</a></li>
           <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
         </ul>
-        <button class="bg-blue-600 text-white px-5 py-2 rounded-full shadow hover:bg-blue-700 transition">Sign Up</button>
+        <!-- Sign Up Button (desktop only) -->
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-full shadow hover:bg-blue-700 transition hidden md:inline-block">Sign Up</button>
+        <!-- Mobile Menu -->
+        <ul x-show="open" @click.away="open = false" x-transition class="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col gap-4 py-4 px-6 font-medium md:hidden z-50">
+          <li><a href="#home" class="hover:text-blue-600 block">Home</a></li>
+          <li><a href="#courses" class="hover:text-blue-600 block">Courses</a></li>
+          <li><a href="#about" class="hover:text-blue-600 block">About</a></li>
+          <li><a href="#testimonials" class="hover:text-blue-600 block">Testimonials</a></li>
+          <li><a href="#contact" class="hover:text-blue-600 block">Contact</a></li>
+          <li><button class="bg-blue-600 text-white px-5 py-2 rounded-full shadow hover:bg-blue-700 transition w-full">Sign Up</button></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero flex flex-col md:flex-row items-center justify-between px-6 py-16 bg-gradient-to-r from-blue-50 to-yellow-50" id="home">
+  <section class="hero flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-16 bg-gradient-to-r from-blue-50 to-yellow-50" id="home">
     <div class="flex-1 mb-10 md:mb-0">
       <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-4 leading-tight">Unlock Your Potential with Kishore Academy</h1>
       <p class="text-lg md:text-xl mb-6 text-gray-700">Interactive courses, expert instructors, and a vibrant community. Learn anywhere, anytime.</p>
@@ -39,35 +60,35 @@
     </div>
     <div class="flex-1 flex justify-center">
         <img src="images/hero.png" alt="Online Learning Illustration"
-     class="w-[480px] max-w-full rounded-xl slide-in-up">
+     class="w-[320px] sm:w-[400px] md:w-[480px] max-w-full rounded-xl slide-in-up">
     </div>
   </section>
 
   <!-- Features Section -->
-  <section class="features grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12 bg-white">
+  <section class="features grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 py-12 bg-white">
     <div class="feature text-center">
         <img src="images/expert.jpg" 
      alt="Expert Instructors" 
-     class="mx-auto w-36 h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
+     class="mx-auto w-28 sm:w-36 h-28 sm:h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
       <h3 class="font-bold text-xl mb-2 text-blue-600">Expert Instructors</h3>
       <p class="text-gray-600">Learn from industry leaders and academic experts.</p>
     </div>
     <div class="feature text-center">
-      <img src="images/flexible.jpg" alt="Flexible Learning" class="mx-auto w-36 h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
+      <img src="images/flexible.jpg" alt="Flexible Learning" class="mx-auto w-28 sm:w-36 h-28 sm:h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
       <h3 class="font-bold text-xl mb-2 text-blue-600">Flexible Learning</h3>
       <p class="text-gray-600">Access courses at your own pace, on any device.</p>
     </div>
     <div class="feature text-center">
-      <img src="images/certificate08.jpg" alt="Certification" class="mx-auto w-36 h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
+      <img src="images/certificate08.jpg" alt="Certification" class="mx-auto w-28 sm:w-36 h-28 sm:h-36 mb-4 border-4 border-blue-500 rounded-full shadow-lg object-cover">
       <h3 class="font-bold text-xl mb-2 text-blue-600">Certification</h3>
       <p class="text-gray-600">Earn certificates to showcase your achievements.</p>
     </div>
   </section>
 
   <!-- Courses Section -->
-  <section class="courses px-6 py-16 bg-gray-50" id="courses">
+  <section class="courses px-4 sm:px-6 py-16 bg-gray-50" id="courses">
     <h2 class="text-center text-3xl font-extrabold text-blue-700 mb-10">Popular Courses</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
       <!-- Course 1 -->
       <div class="course-card bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition card-hover-red">
         <img src="images/web.jpg" alt="Web Development" class="rounded-lg mb-4 w-full h-36 object-cover">
@@ -128,9 +149,9 @@
   </section>
 
   <!-- About Section -->
-  <section class="about px-6 py-16 bg-white" id="about">
+  <section class="about px-4 sm:px-6 py-16 bg-white" id="about">
     <div class="about-content flex flex-col md:flex-row items-center gap-10 max-w-5xl mx-auto">
-        <img src="images/students-training.jpg" alt= "About Kishore Academy" class="w-72 max-w-full rounded-xl shadow-lg">
+        <img src="images/students-training.jpg" alt= "About Kishore Academy" class="w-64 sm:w-72 max-w-full rounded-xl shadow-lg mb-8 md:mb-0">
       <div>
         <h2 class="text-3xl font-extrabold text-blue-700 mb-4">About Kishore Academy</h2>
         <p class="text-lg text-gray-700">Kishore Academy is dedicated to making high-quality education accessible to everyone. Our platform connects learners with top instructors and a supportive community, empowering you to achieve your goals.</p>
@@ -139,7 +160,7 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials px-6 py-16 bg-gray-50" id="testimonials">
+  <section class="testimonials px-4 sm:px-6 py-16 bg-gray-50" id="testimonials">
     <h2 class="text-center text-3xl font-extrabold text-blue-700 mb-10">What Our Learners Say</h2>
     <div class="testimonial-list flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
       <div class="testimonial bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
@@ -162,7 +183,7 @@
 
   <!-- Updated Contact Section -->
   <footer class="footer bg-gradient-to-r from-blue-700 via-blue-800 to-yellow-400 text-white py-16" id="contact">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4 sm:px-6">
       <!-- Contact Info -->
       <div>
         <h3 class="font-bold text-2xl mb-4">Contact Us</h3>
